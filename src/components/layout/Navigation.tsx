@@ -14,6 +14,7 @@ export function Navigation({ links, donate }: { links: NavLink[]; donate: NavLin
         document.getElementById('menu-toggle')?.focus();
       }
     }}>
+      <a className="nav-register" href="/register">Register (Dec 29)</a>
       <button id="menu-toggle" className="menu-toggle" type="button" aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>
         {open ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
         <span>{open ? 'Close' : 'Menu'}</span>

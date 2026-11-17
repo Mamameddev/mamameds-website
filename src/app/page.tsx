@@ -19,7 +19,7 @@ export default async function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, '\\u003c') }} />
       {preview && <><PreviewBar /><VisualEditing /></>}
       <Header website={website} />
-      <main id="main-content" tabIndex={-1}><LandingPage website={website} /></main>
+      <main id="main-content" tabIndex={-1}><aside className="registration-banner" aria-label="Upcoming outreach"><div className="page-container"><p>Pregnant? Register for free antenatal medicine on 29 December</p><a className="primary-link" href="/register">Register now</a></div></aside><LandingPage website={website} /></main>
       <Footer website={website} />
     </>
   );
