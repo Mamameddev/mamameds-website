@@ -5,7 +5,7 @@ import { Heart, Menu, X } from 'lucide-react';
 
 export type NavLink = { label: string; href: string };
 
-export function Navigation({ links, donate }: { links: NavLink[]; donate: NavLink }) {
+export function Navigation({ links, donate, registrationHref = '/register' }: { links: NavLink[]; donate: NavLink; registrationHref?: string }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="navigation" onKeyDown={(event) => {
@@ -14,7 +14,7 @@ export function Navigation({ links, donate }: { links: NavLink[]; donate: NavLin
         document.getElementById('menu-toggle')?.focus();
       }
     }}>
-      <a className="nav-register" href="/register">Register (Dec 29)</a>
+      <a className="nav-register" href={registrationHref} onClick={() => setOpen(false)}>Register (Dec 29)</a>
       <button id="menu-toggle" className="menu-toggle" type="button" aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>
         {open ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
         <span>{open ? 'Close' : 'Menu'}</span>
