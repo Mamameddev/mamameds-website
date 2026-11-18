@@ -1,8 +1,8 @@
 # December 29, 2026 outreach registration
 
-Local production preview: http://localhost:3011/register
+Local production preview: http://localhost:3013/register
 
-The `/register` page uses the approved flyer and Google Form. Responses go directly to Google Forms; this site stores no registration details and sends no confirmations. Google Forms displays the submission confirmation. Kasite can follow up manually.
+The `/register` page uses the approved flyer and a direct Google Form link. The form is not embedded, so no Google Forms resources load until the visitor follows the link. Responses go directly to Google Forms; this site stores no registration details and sends no confirmations. Google Forms displays the submission confirmation. Kasite can follow up manually.
 
 The source flyer is optimized as `public/images/december-2026-outreach.webp` (117,826 bytes, 1024 × 1280). Event content lives in `src/app/register/page.tsx`; this release adds no CMS fields or services. The existing CMS still provides shared branding and footer content.
 
@@ -15,4 +15,4 @@ The source flyer is optimized as `public/images/december-2026-outreach.webp` (11
 
 ## After the outreach
 
-Keep `/register` available for existing flyer links. Replace the registration form and availability copy with a short thank-you message. Remove the registration header link and homepage promotion, or replace the banner with a results link. Add only results supplied by Kasite. Update page metadata and sitemap frequency. No automatic closure or results are currently scheduled.
+Keep `/register` available for existing flyer links. Replace the registration link and event copy with a short thank-you message. Remove the registration header link and homepage promotion, or replace the banner with a results link. Add only results supplied by Kasite. Update page metadata and sitemap frequency. No automatic closure or results are currently scheduled.
